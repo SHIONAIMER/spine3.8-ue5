@@ -1,0 +1,16 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{6CFD43DC-4908-7035-5A65-8885F2115362}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "SpineUE4",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	]
+}

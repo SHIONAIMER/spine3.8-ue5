@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SpineUE4.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SpineUE4.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SpineUE4Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\LICENSE" />
+    <None Include="..\..\README.md" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SpinePlugin">
+      <UniqueIdentifier>{58FE3454-8111-3AFA-A6E6-EB4558884727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SpinePlugin\Source">
+      <UniqueIdentifier>{7878A36A-F358-3D31-AB61-6A334E0D89F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SpinePlugin\Source\SpineEditorPlugin">
+      <UniqueIdentifier>{67DE80EA-BE25-3605-A0CF-B4220697D454}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\SpineEditorPlugin.Build.cs">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\SpinePlugin\Source\SpineEditorPlugin\Private">
+      <UniqueIdentifier>{A2EA26F7-8A29-3F88-BDE3-612897C243AB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineAtlasImportFactory.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineEditorPlugin.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineEditorPluginPrivatePCH.h">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineSkeletonImportFactory.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SpinePlugin\Source\SpineEditorPlugin\Public">
+      <UniqueIdentifier>{D1CC4060-2BA1-3480-B31C-0DCE3001DB03}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public\SpineAtlasImportFactory.h">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public\SpineEditorPlugin.h">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public\SpineSkeletonImportFactory.h">
+      <Filter>Plugins\SpinePlugin\Source\SpineEditorPlugin\Public</Filter>
+    </ClCompile>
+    <None Include="..\..\Plugins\SpinePlugin\SpinePlugin.uplugin">
+      <Filter>Plugins\SpinePlugin</Filter>
+    </None>
+    <Filter Include="Plugins\SpinePlugin\Resources">
+      <UniqueIdentifier>{B1F8969A-F00B-3636-9977-AADE2953FA51}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SpinePlugin\Resources\Icon128.png">
+      <Filter>Plugins\SpinePlugin\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\SpinePlugin\Source\SpinePlugin">
+      <UniqueIdentifier>{74CB4774-888F-35DF-A1A4-6F9425B26A0F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\SpinePlugin.Build.cs">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin</Filter>
+    </None>
+    <Filter Include="Plugins\SpinePlugin\Source\SpinePlugin\Private">
+      <UniqueIdentifier>{56A8A74B-CD66-3DA0-8745-7A14F3544AFF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineAtlasAsset.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineBoneDriverComponent.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineBoneFollowerComponent.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpinePlugin.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpinePluginPrivatePCH.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonAnimationComponent.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonComponent.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonDataAsset.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonRendererComponent.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineWidget.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SSpineWidget.cpp">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SpinePlugin\Source\SpinePlugin\Public">
+      <UniqueIdentifier>{0CF5F96F-8590-3C6A-8C97-56E362E367E0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineAtlasAsset.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineBoneDriverComponent.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineBoneFollowerComponent.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpinePlugin.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonAnimationComponent.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonComponent.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonDataAsset.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonRendererComponent.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineWidget.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SSpineWidget.h">
+      <Filter>Plugins\SpinePlugin\Source\SpinePlugin\Public</Filter>
+    </ClCompile>
+    <Filter Include="Source\SpineUE4">
+      <UniqueIdentifier>{7600B4CB-7E00-390A-AA01-35055B428B09}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SpineUE4\MySceneComponent.cpp">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpineUE4\MySceneComponent.h">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineboyCppPawn.cpp">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineboyCppPawn.h">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <None Include="..\..\Source\SpineUE4\SpineUE4.Build.cs">
+      <Filter>Source\SpineUE4</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4.cpp">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4.h">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4GameMode.cpp">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4GameMode.h">
+      <Filter>Source\SpineUE4</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

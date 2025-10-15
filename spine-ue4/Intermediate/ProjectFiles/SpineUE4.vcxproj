@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Invalid|x64">
+      <Configuration>Invalid</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_Debug|x64">
+      <Configuration>Win64_arm64_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_Debug|x64">
+      <Configuration>Win64_arm64ec_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_Editor|x64">
+      <Configuration>Debug_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_Debug_Editor|x64">
+      <Configuration>Win64_arm64_Debug_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_Debug_Editor|x64">
+      <Configuration>Win64_arm64ec_Debug_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_arm64_Debug|x64">
+      <Configuration>Android_arm64_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugGame|x64">
+      <Configuration>DebugGame</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_DebugGame|x64">
+      <Configuration>Win64_arm64_DebugGame</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_DebugGame|x64">
+      <Configuration>Win64_arm64ec_DebugGame</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugGame_Editor|x64">
+      <Configuration>DebugGame_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_DebugGame_Editor|x64">
+      <Configuration>Win64_arm64_DebugGame_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_DebugGame_Editor|x64">
+      <Configuration>Win64_arm64ec_DebugGame_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_arm64_DebugGame|x64">
+      <Configuration>Android_arm64_DebugGame</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Development|x64">
+      <Configuration>Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_Development|x64">
+      <Configuration>Win64_arm64_Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_Development|x64">
+      <Configuration>Win64_arm64ec_Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Development_Editor|x64">
+      <Configuration>Development_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_Development_Editor|x64">
+      <Configuration>Win64_arm64_Development_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_Development_Editor|x64">
+      <Configuration>Win64_arm64ec_Development_Editor</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_arm64_Development|x64">
+      <Configuration>Android_arm64_Development</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_Test|x64">
+      <Configuration>Win64_arm64_Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_Test|x64">
+      <Configuration>Win64_arm64ec_Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_arm64_Test|x64">
+      <Configuration>Android_arm64_Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Shipping|x64">
+      <Configuration>Shipping</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64_Shipping|x64">
+      <Configuration>Win64_arm64_Shipping</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win64_arm64ec_Shipping|x64">
+      <Configuration>Win64_arm64ec_Shipping</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Android_arm64_Shipping|x64">
+      <Configuration>Android_arm64_Shipping</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{893198C0-AD9B-3AC7-AD3E-89C6ACFA5183}</ProjectGuid>
+    <RootNamespace>SpineUE4</RootNamespace>
+  </PropertyGroup>
+  <Import Project="UECommon.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>$(IncludePath);$(DefaultSystemIncludePaths);</IncludePath>
+    <NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <AdditionalOptions>/std:c++20  /Zc:hiddenFriend /Zc:__cplusplus</AdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Debug.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Debug|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Debugarm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Debug|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Debug|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Debugarm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Debug|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor-Win64-Debug.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Debug_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor-Win64-Debugarm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Debug_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Debug_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor-Win64-Debugarm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Debug_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Debug -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Debug|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Android Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Android Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Android Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\SpineUE4-Android-Debug.so</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Debug|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Android Debug -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-DebugGame.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_DebugGame|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-DebugGamearm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_DebugGame|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_DebugGame|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-DebugGamearm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_DebugGame|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGame.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_DebugGame_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGamearm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_DebugGame_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_DebugGame_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor-Win64-DebugGamearm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_DebugGame_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 DebugGame -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_DebugGame|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Android DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Android DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Android DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\SpineUE4-Android-DebugGame.so</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_DebugGame|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Android DebugGame -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Development|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4arm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Development|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Development|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4arm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Development|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditor.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Development_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditorarm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Development_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Development_Editor|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>D:\project\UE_553\Engine\Binaries\Win64\UnrealEditorarm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Development_Editor|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) -Target="SpineUE4Editor Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\"" -Target="ShaderCompileWorker Win64 Development -Project=\"$(SolutionDir)SpineUE4.uproject\" -Quiet" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Development|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Android Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Android Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Android Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\SpineUE4.so</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Development|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Android Development -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Test.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Test|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Testarm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Test|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Test|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Testarm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Test|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Test|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Android Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Android Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Android Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\SpineUE4-Android-Test.so</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Test|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Android Test -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Shipping.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=x64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Shipping|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Shippingarm64.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64_Shipping|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Shipping|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Win64\SpineUE4-Win64-Shippingarm64ec.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Win64_arm64ec_Shipping|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Win64 Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64ec -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Shipping|x64'">
+    <NMakeBuildCommandLine>$(BuildBatchScript) SpineUE4 Android Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>$(RebuildBatchScript) SpineUE4 Android Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(CleanBatchScript) SpineUE4 Android Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64</NMakeCleanCommandLine>
+    <NMakeOutput>..\..\Binaries\Android\SpineUE4-Android-Shipping.so</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Android_arm64_Shipping|x64'">
+    <NMakeCompile>
+      <NMakeCompileFileCommandLine>$(BuildBatchScript) SpineUE4 Android Shipping -Project="$(SolutionDir)SpineUE4.uproject" -WaitMutex -FromMsBuild -architecture=arm64 -WorkingDir=$(MSBuildProjectDirectory) -Files=$(SelectedFiles)</NMakeCompileFileCommandLine>
+    </NMakeCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\SpineUE4.uproject"/>
+    <None Include="..\..\Source\SpineUE4.Target.cs"/>
+    <None Include="..\..\Source\SpineUE4Editor.Target.cs"/>
+    <None Include="..\..\LICENSE"/>
+    <None Include="..\..\README.md"/>
+    <None Include="..\..\Config\DefaultEditor.ini"/>
+    <None Include="..\..\Config\DefaultEngine.ini"/>
+    <None Include="..\..\Config\DefaultGame.ini"/>
+    <None Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\SpineEditorPlugin.Build.cs"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineAtlasImportFactory.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineEditorPlugin.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineEditorPluginPrivatePCH.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Private\SpineSkeletonImportFactory.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public\SpineAtlasImportFactory.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public\SpineEditorPlugin.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpineEditorPlugin\Public\SpineSkeletonImportFactory.h"/>
+    <None Include="..\..\Plugins\SpinePlugin\SpinePlugin.uplugin"/>
+    <None Include="..\..\Plugins\SpinePlugin\Resources\Icon128.png"/>
+    <None Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\SpinePlugin.Build.cs"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineAtlasAsset.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineBoneDriverComponent.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineBoneFollowerComponent.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpinePlugin.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpinePluginPrivatePCH.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonAnimationComponent.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonComponent.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonDataAsset.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineSkeletonRendererComponent.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SpineWidget.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Private\SSpineWidget.cpp"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineAtlasAsset.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineBoneDriverComponent.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineBoneFollowerComponent.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpinePlugin.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonAnimationComponent.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonComponent.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonDataAsset.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineSkeletonRendererComponent.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SpineWidget.h"/>
+    <ClCompile Include="..\..\Plugins\SpinePlugin\Source\SpinePlugin\Public\SSpineWidget.h"/>
+    <ClCompile Include="..\..\Source\SpineUE4\MySceneComponent.cpp"/>
+    <ClCompile Include="..\..\Source\SpineUE4\MySceneComponent.h"/>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineboyCppPawn.cpp"/>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineboyCppPawn.h"/>
+    <None Include="..\..\Source\SpineUE4\SpineUE4.Build.cs"/>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4.cpp"/>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4.h"/>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4GameMode.cpp"/>
+    <ClCompile Include="..\..\Source\SpineUE4\SpineUE4GameMode.h"/>
+  </ItemGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <PropertyGroup>
+    <CleanDependsOn> $(CleanDependsOn); </CleanDependsOn>
+    <CppCleanDependsOn></CppCleanDependsOn>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

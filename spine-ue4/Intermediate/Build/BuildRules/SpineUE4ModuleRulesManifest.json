@@ -1,0 +1,10 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\admin\\Downloads\\spine-runtimes-3.8\\spine-ue4\\Source\\SpineUE4\\SpineUE4.Build.cs",
+		"C:\\Users\\admin\\Downloads\\spine-runtimes-3.8\\spine-ue4\\Plugins\\SpinePlugin\\Source\\SpineEditorPlugin\\SpineEditorPlugin.Build.cs",
+		"C:\\Users\\admin\\Downloads\\spine-runtimes-3.8\\spine-ue4\\Plugins\\SpinePlugin\\Source\\SpinePlugin\\SpinePlugin.Build.cs",
+		"C:\\Users\\admin\\Downloads\\spine-runtimes-3.8\\spine-ue4\\Source\\SpineUE4.Target.cs",
+		"C:\\Users\\admin\\Downloads\\spine-runtimes-3.8\\spine-ue4\\Source\\SpineUE4Editor.Target.cs"
+	],
+	"EngineVersion": "5.5.3"
+}
